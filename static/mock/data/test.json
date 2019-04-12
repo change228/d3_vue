@@ -1,8 +1,53 @@
 [
   {
-    "title": "11"
+    "sourceId": "00001",
+    "sourceType": "person",
+    "sourceName": "马云",
+    "targetId": "00002",
+    "targetType": "company",
+    "targetName": "中国阿里巴巴",
+    "relations": [
+      {
+        "relationType": "001",
+        "relationKey": "职务",
+        "relationValue": "CEO,创始人,天使投资人"
+      },
+      {
+        "relationType": "002",
+        "relationKey": "控股",
+        "relationValue": "80"
+      }
+    ]
   },
   {
-    "title": "22"
+    "sourceId": "00002",
+    "sourceType": "company",
+    "sourceName": "中国阿里巴巴",
+    "targetId": "00003",
+    "targetType": "company",
+    "targetName": "杭州阿里巴巴",
+    "relations": [
+      {
+        "relationType": "003",
+        "relationKey": "子公司",
+        "relationValue": "10"
+      },
+      {
+        "relationType": "004",
+        "relationKey": "亲密度",
+        "relationValue": "10"
+      },
+      {
+        "relationType": "005",
+        "relationKey": "供应商",
+        "relationValue": ""
+      },
+      {
+        "relationType": "006",
+        "relationKey": "人才输入",
+        "relationValue": "784",
+        "reverse": true
+      }
+    ]
   }
 ]
