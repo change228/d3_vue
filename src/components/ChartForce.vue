@@ -3,34 +3,31 @@
 </template>
 
 <script>
-// import * as d3 from 'd3';
+import { mapGetters, mapActions } from 'vuex'
 export default {
-  props: {
-    container: 'body'
-  },
   data () {
     return {
-      dataset: null
+      container: 'body'
     }
   },
-  watch: {
-    dataset (val) {
-      console.log(val)
-    }
+  computed: {
+    ...mapGetters([
+      'forceData'
+    ])
   },
   mounted () {
-    this.getData()
+    this.getForceData(this)
+      .then(({ nodes, links }) => {
+        console.log(111, nodes, links)
+      })
     this.initChart()
   },
   methods: {
-    getData () {
-      this.$axios.get('static/mock/data/test.json').then(({ data }) => {
-        this.dataset = data
-      });
-    },
+    ...mapActions([
+      'getForceData'
+    ]),
     initChart () {
-      // let width = this.$el.offsetWidth
-      // let height = this.$el.offsetHeight
+
     }
   }
 };
